@@ -37,6 +37,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
@@ -44,7 +45,7 @@
       <recent name="$PROJECT_DIR$/argtable" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.AOC2020_Day14_Part1">
+  <component name="RunManager" selected="CMake Application.AOC2020_Day14_Part2">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -60,7 +61,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AOC2020_Day14_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 14 --part 1 --runs 10 inputs/2020/14.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
+    <configuration name="AOC2020_Day14_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 14 --part 1 --runs 100 inputs/2020/14.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -104,9 +105,7 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="years" language="ObjectiveC" />
-        <watch expression="year-&gt;ival[0]" language="ObjectiveC" />
-        <watch expression="day-&gt;ival[0]" language="ObjectiveC" />
+        <watch expression="instructions" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
