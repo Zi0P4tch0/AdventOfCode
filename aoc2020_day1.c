@@ -35,5 +35,5 @@ void aoc2020_day1_p2(guint n_run) {
 }
 
 void aoc2020_day1_cleanup() {
-    g_array_free(numbers, TRUE);
+    g_array_unref(numbers);
 }

@@ -13,6 +13,7 @@ static GArray *instructions = NULL;
 void aoc2020_day14_format_data(const gchar **lines, guint n_lines) {
 
     instructions = g_array_new(FALSE, FALSE, sizeof(instruction_t));
+
     gchar mask[ADDRESS_SPACE+1];
 
     for (guint i=0; i<n_lines; i++) {
@@ -26,7 +27,7 @@ void aoc2020_day14_format_data(const gchar **lines, guint n_lines) {
 
             g_strfreev(tokens);
 
-        } else {
+        } else { // Generate instructions
 
             gchar **tokens = g_strsplit(*(lines+i), " = ", 0);
 
@@ -65,6 +66,7 @@ void aoc2020_day14_p1(guint n_run) {
 
         instruction_t instruction = g_array_index(instructions, instruction_t, i);
 
+        // Generate clear / set masks
         guint64 clear = 0, set = 0;
         for (gint m=0; m<ADDRESS_SPACE; m++) {
             set <<= 1;
@@ -82,6 +84,7 @@ void aoc2020_day14_p1(guint n_run) {
         *key = instruction.address;
         guint64 *value = g_malloc(sizeof(guint64));
         *value = (instruction.value & clear) | set;
+
         g_hash_table_insert(memory, key, value);
 
     }
@@ -93,25 +96,30 @@ void aoc2020_day14_p1(guint n_run) {
 
 }
 
-void mask_combinations(const gchar *template, GPtrArray **tmp) {
+static void mask_combinations(const gchar *template, GPtrArray **tmp) {
+    g_assert(tmp);
 
-   if (!*tmp) {
-       *tmp = g_ptr_array_new_full(0, g_free);
-   }
+    if (!*tmp) {
+        guint n_x = 0;
+        for (guint i=0; i<strlen(template); i++) { if (template[i] == 'X') n_x += 1; }
+        guint n_combo = 1UL << n_x;
+        *tmp = g_ptr_array_new_full(n_combo, g_free);
+    }
 
-   if (strstr(template, "X") == NULL) {
-       g_ptr_array_add(*tmp, g_strdup(template));
-   } else {
-       guint index = strcspn(template, "X");
-       gchar m1[ADDRESS_SPACE+1], m2[ADDRESS_SPACE+1];
-       memcpy(m1, template, ADDRESS_SPACE+1);
-       memcpy(m2, template, ADDRESS_SPACE+1);
-       m1[index] = '0';
-       m2[index] = '1';
-       mask_combinations(m1, tmp);
-       mask_combinations(m2, tmp);
-   }
+    gchar *x_location = NULL;
 
+    if ((x_location = strstr(template, "X")) == NULL) {
+        g_ptr_array_add(*tmp, g_strdup(template));
+    } else {
+        gchar m1[ADDRESS_SPACE+1], m2[ADDRESS_SPACE+1];
+        memcpy(m1, template, ADDRESS_SPACE+1);
+        memcpy(m2, template, ADDRESS_SPACE+1);
+        m1[x_location - template] = '0';
+        m2[x_location - template] = '1';
+        mask_combinations(m1, tmp);
+        mask_combinations(m2, tmp);
+    }
+    
 }
 
 // https://stackoverflow.com/a/3208376/2890168

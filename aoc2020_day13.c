@@ -52,5 +52,5 @@ void aoc2020_day13_p2(guint n_run) {
 }
 
 void aoc2020_day13_cleanup() {
-    g_array_free(buses, TRUE);
+    g_array_unref(buses);
 }
