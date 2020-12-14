@@ -16,6 +16,7 @@ set(SOURCES ${SOURCES}
         ${CMAKE_CURRENT_SOURCE_DIR}/main.c
         ${CMAKE_CURRENT_SOURCE_DIR}/combinations.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day1.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day2.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day13.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day14.c)
 
