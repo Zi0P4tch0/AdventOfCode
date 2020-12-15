@@ -15,10 +15,12 @@ set(HEADERS ${HEADERS})
 set(SOURCES ${SOURCES}
         ${CMAKE_CURRENT_SOURCE_DIR}/main.c
         ${CMAKE_CURRENT_SOURCE_DIR}/combinations.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/cmp.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day1.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day2.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day3.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day4.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day5.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day13.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day14.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day15.c)
