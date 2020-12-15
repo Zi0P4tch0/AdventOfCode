@@ -51,6 +51,7 @@ void measure(void (*f)(guint)) {
 
 GEN_DECLS(2020, 1)
 GEN_DECLS(2020, 2)
+GEN_DECLS(2020, 3)
 GEN_DECLS(2020, 13)
 GEN_DECLS(2020, 14)
 
@@ -58,6 +59,7 @@ int main(int argc, char *argv[]) {
 
     PUSH_DECLS(2020, 1)
     PUSH_DECLS(2020, 2)
+    PUSH_DECLS(2020, 3)
     PUSH_DECLS(2020, 13)
     PUSH_DECLS(2020, 14)
 

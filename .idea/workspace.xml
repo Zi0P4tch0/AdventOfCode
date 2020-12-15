@@ -45,7 +45,7 @@
       <recent name="$PROJECT_DIR$/argtable" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.AOC2020_Day2_Part1">
+  <component name="RunManager" selected="CMake Application.AOC2020_Day3_Part2">
     <configuration name="AOC2020_Day13_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 13 --part 1 --runs 10 inputs/2020/13.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -86,6 +86,16 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AOC2020_Day3_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 3 --part 1 --runs 10 inputs/2020/3.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AOC2020_Day3_Part2" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 3 --part 2 --runs 10 inputs/2020/3.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Help" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--help" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -107,6 +117,8 @@
       <item itemvalue="CMake Application.AOC2020_Day1_Part2" />
       <item itemvalue="CMake Application.AOC2020_Day2_Part1" />
       <item itemvalue="CMake Application.AOC2020_Day2_Part2" />
+      <item itemvalue="CMake Application.AOC2020_Day3_Part1" />
+      <item itemvalue="CMake Application.AOC2020_Day3_Part2" />
       <item itemvalue="CMake Application.AOC2020_Day13_Part1" />
       <item itemvalue="CMake Application.AOC2020_Day13_Part2" />
       <item itemvalue="CMake Application.AOC2020_Day14_Part1" />
@@ -118,6 +130,8 @@
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="instructions" language="ObjectiveC" />
+        <watch expression="map" language="ObjectiveC" />
+        <watch expression="map[row]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
