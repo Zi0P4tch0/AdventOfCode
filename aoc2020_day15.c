@@ -38,11 +38,13 @@ guint van_ecks_nth(const GArray *seed, guint nth) {
 }
 
 void aoc2020_day15_p1(guint n_run) {
-    if (!n_run) g_message("Part I: %u", van_ecks_nth(numbers, 2020));
+    guint result = van_ecks_nth(numbers, 2020);
+    if (!n_run) g_message("Part I: %u", result);
 }
 
 void aoc2020_day15_p2(guint n_run) {
-    if (!n_run) g_message("Part I: %u", van_ecks_nth(numbers, 30000000));
+    guint result = van_ecks_nth(numbers, 30000000);
+    if (!n_run) g_message("Part II: %u", result);
 }
 
 void aoc2020_day15_cleanup() {
