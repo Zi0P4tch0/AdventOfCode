@@ -7,7 +7,7 @@ typedef struct {
     guint right;
 } range_t;
 
-#define IN_RANGE(X, RANGE) (X >= RANGE.left && X <= RANGE.right)
+#define IN_RANGE(VALUE, RANGE) (VALUE >= RANGE.left && VALUE <= RANGE.right)
 
 // Rule
 
@@ -18,7 +18,7 @@ typedef struct {
     GArray *possible_indexes;
 } rule_t;
 
-#define IS_VALID(X, RULE) (IN_RANGE(X, RULE->first_range) || IN_RANGE(X, RULE->second_range))
+#define MATCHES_RULE(VALUE, RULE) (IN_RANGE(VALUE, RULE->first_range) || IN_RANGE(VALUE, RULE->second_range))
 
 static gpointer rule_copy(gconstpointer _r, gpointer user_data) {
     const rule_t *r = _r;
@@ -42,7 +42,7 @@ static void rule_free(gpointer ptr) {
 static gboolean rule_matches_column(const rule_t *rule, const GArray *column) {
     for (guint c=0; c<column->len; c++) {
         guint value = g_array_index(column, guint, c);
-        if (!IS_VALID(value, rule)) { return FALSE; }
+        if (!MATCHES_RULE(value, rule)) { return FALSE; }
     }
     return TRUE;
 }
@@ -93,6 +93,9 @@ static GPtrArray *valid_nearby_tickets = NULL;
 // Populated after parsing "my ticket"
 static guint n_fields = 0;
 
+#define STREQ(LHS, RHS) (!g_strcmp0(LHS, RHS))
+#define UINT(STR) (strtoul(STR, NULL, 10))
+
 void aoc2020_day16_format_data(const gchar **lines, guint n_lines) {
 
     gboolean should_skip_line = FALSE;
@@ -101,12 +104,18 @@ void aoc2020_day16_format_data(const gchar **lines, guint n_lines) {
     valid_nearby_tickets = g_ptr_array_new_full(0, ticket_free);
     format_state_t state = FORMAT_STATE_RULES;
 
+    g_autoptr(GRegex) rule_regex =
+            g_regex_new("^(?<field>.*): (?<r1l>[0-9]+)-(?<r1r>[0-9]+) or (?<r2l>[0-9]+)-(?<r2r>[0-9]+)$",
+                        G_REGEX_OPTIMIZE,
+                        0,
+                        NULL);
+
     for (guint i=0; i<n_lines; i++) {
         if (should_skip_line) {
             should_skip_line = FALSE;
             continue;
         }
-        if (!g_strcmp0(*(lines+i), "")) {
+        if STREQ(*(lines+i), "") {
             state += 1;
             should_skip_line = TRUE;
             if (state > FORMAT_STATE_NEARBY_TICKETS) {
@@ -118,27 +127,27 @@ void aoc2020_day16_format_data(const gchar **lines, guint n_lines) {
         switch (state) {
             case FORMAT_STATE_RULES:
                 {
-                    // class: 1-3 or 5-7
-                    gchar **tokens = g_strsplit(*(lines+i), ": ", 0);
-                    g_assert(g_strv_length(tokens) == 2);
-                    gchar **range = g_strsplit(tokens[1], " or ", 0);
 
-                    gchar *name = g_strdup(*tokens);
-                    range_t first_range = { strtoul(range[0], NULL, 10),
-                                            strtoul(range[0]+strcspn(range[0], "-")+1, NULL, 10) };
-                    range_t second_range = { strtoul(range[1], NULL, 10),
-                                            strtoul(range[1]+strcspn(range[1], "-")+1, NULL, 10) };
+                    g_autoptr(GMatchInfo) match_info;
+                    g_regex_match(rule_regex, *(lines+i), 0, &match_info);
+
+                    gchar *name = g_match_info_fetch_named(match_info, "field");
+                    g_autofree gchar *r1l = g_match_info_fetch_named(match_info, "r1l");
+                    g_autofree gchar *r1r = g_match_info_fetch_named(match_info, "r1r");
+                    g_autofree gchar *r2l = g_match_info_fetch_named(match_info, "r2l");
+                    g_autofree gchar *r2r = g_match_info_fetch_named(match_info, "r2r");
+
+                    range_t r1 = { UINT(r1l), UINT(r1r)};
+                    range_t r2 = { UINT(r2l), UINT(r2r)};
 
                     rule_t *r = g_malloc0(sizeof(*r));
                     r->name = name;
-                    memcpy(&r->first_range, &first_range, sizeof(first_range));
-                    memcpy(&r->second_range, &second_range, sizeof(second_range));
+                    memcpy(&r->first_range, &r1, sizeof(r1));
+                    memcpy(&r->second_range, &r2, sizeof(r2));
                     r->possible_indexes = g_array_new(FALSE, FALSE, sizeof(guint));
 
                     g_ptr_array_add(rules, r);
 
-                    g_strfreev(tokens);
-                    g_strfreev(range);
                 }
                 break;
             case FORMAT_STATE_MY_TICKET:
@@ -149,7 +158,7 @@ void aoc2020_day16_format_data(const gchar **lines, guint n_lines) {
                     my_ticket = ticket_new();
 
                     for (guint t=0; t<n_fields; t++) {
-                        guint number = strtoul(tokens[t], NULL, 10);
+                        guint number = UINT(tokens[t]);
                         g_array_append_val(my_ticket->fields, number);
                     }
 
@@ -162,7 +171,7 @@ void aoc2020_day16_format_data(const gchar **lines, guint n_lines) {
                     ticket_t *ticket = ticket_new();
 
                     for (guint t=0; t<n_fields; t++) {
-                        guint number = strtoul(tokens[t], NULL, 10);
+                        guint number = UINT(tokens[t]);
                         g_array_append_val(ticket->fields, number);
                     }
 
@@ -178,7 +187,7 @@ void aoc2020_day16_format_data(const gchar **lines, guint n_lines) {
 
 void aoc2020_day16_p1(guint n_run) {
 
-    guint sum = 0;
+    guint64 sum = 0;
 
     for (guint i=0; i<nearby_tickets->len; i++) {
         ticket_t *ticket = g_ptr_array_index(nearby_tickets, i);
@@ -187,8 +196,8 @@ void aoc2020_day16_p1(guint n_run) {
             guint field = g_array_index(ticket->fields, guint, f);
             for (guint r=0; r<rules->len; r++) {
                 rule_t *rule = g_ptr_array_index(rules, r);
-                if (IS_VALID(field, rule)) { break; }
-                if (r == rules->len-1 && !IS_VALID(field, rule)) {
+                if (MATCHES_RULE(field, rule)) { break; }
+                if (r == rules->len-1 && !MATCHES_RULE(field, rule)) {
                     sum += field;
                     good = FALSE;
                 }
@@ -199,9 +208,10 @@ void aoc2020_day16_p1(guint n_run) {
         }
     }
 
-    if (!n_run) g_message("Part I: %d", sum);
+    if (!n_run) g_message("Part I: %llu", sum);
 }
 
+/// Sorts the rules from the most to the least constrained
 static gint rule_cmp(gconstpointer a, gconstpointer b) {
     rule_t *_a = *((rule_t **)a);
     rule_t *_b = *((rule_t **)b);
@@ -275,7 +285,7 @@ void aoc2020_day16_p2(guint n_run) {
    // Free mem
    for (guint i=0; i<n_fields; i++) { g_free(final_rules[i]); }
 
-   if (!n_run) g_message("Part II: %lld", mul);
+   if (!n_run) g_message("Part II: %llu", mul);
 }
 
 void aoc2020_day16_cleanup() {
