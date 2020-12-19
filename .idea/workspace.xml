@@ -46,7 +46,12 @@
       <recent name="$PROJECT_DIR$/argtable" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.AOC2020_Day18_Part2">
+  <component name="RunManager" selected="CMake Application.AOC2020_Day17_Part1">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AOC2020_Day13_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 13 --part 1 --runs 10 inputs/2020/13.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -87,12 +92,22 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AOC2020_Day17_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 17 --part 1 --runs 1 inputs/2020/17.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AOC2020_Day17_Part2" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 17 --part 2 --runs 1 inputs/2020/17.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AOC2020_Day18_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 18 --part 1 --runs 10 inputs/2020/18.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AOC2020_Day18_Part2" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 18 --part 2 --runs 1 inputs/2020/18.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
+    <configuration name="AOC2020_Day18_Part2" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 18 --part 2 --runs 100 inputs/2020/18.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -201,6 +216,8 @@
       <item itemvalue="CMake Application.AOC2020_Day15_Part2" />
       <item itemvalue="CMake Application.AOC2020_Day16_Part1" />
       <item itemvalue="CMake Application.AOC2020_Day16_Part2" />
+      <item itemvalue="CMake Application.AOC2020_Day17_Part1" />
+      <item itemvalue="CMake Application.AOC2020_Day17_Part2" />
       <item itemvalue="CMake Application.AOC2020_Day18_Part1" />
       <item itemvalue="CMake Application.AOC2020_Day18_Part2" />
     </list>

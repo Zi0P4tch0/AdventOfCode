@@ -27,6 +27,7 @@ set(SOURCES ${SOURCES}
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day14.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day15.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day16.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day17.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day18.c)
 
 add_subdirectory(argtable)
