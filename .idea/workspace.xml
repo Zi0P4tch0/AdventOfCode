@@ -47,7 +47,7 @@
       <recent name="$PROJECT_DIR$/argtable" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.AOC2020_Day19_Part2">
+  <component name="RunManager" selected="CMake Application.AOC2020_Day21_Part2">
     <configuration name="AOC2020_Day13_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 13 --part 1 --runs 10 inputs/2020/13.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -128,6 +128,26 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AOC2020_Day20_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 20 --part 1 --runs 1 inputs/2020/20.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AOC2020_Day20_Part2" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 20 --part 1 --runs 1 inputs/2020/20.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AOC2020_Day21_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 21 --part 1 --runs 100 inputs/2020/21.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AOC2020_Day21_Part2" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 21 --part 2 --runs 100 inputs/2020/21.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AOC2020_Day2_Part1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--year 2020 --day 2 --part 1 --runs 10 inputs/2020/2.txt" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AdventOfCode" TARGET_NAME="AdventOfCode" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AdventOfCode" RUN_TARGET_NAME="AdventOfCode">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -193,6 +213,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="CMake Application.Help" />
       <item itemvalue="CMake Application.AOC2020_Day1_Part1" />
@@ -223,18 +248,11 @@
       <item itemvalue="CMake Application.AOC2020_Day18_Part2" />
       <item itemvalue="CMake Application.AOC2020_Day19_Part1" />
       <item itemvalue="CMake Application.AOC2020_Day19_Part2" />
+      <item itemvalue="CMake Application.AOC2020_Day20_Part1" />
+      <item itemvalue="CMake Application.AOC2020_Day20_Part2" />
+      <item itemvalue="CMake Application.AOC2020_Day21_Part1" />
+      <item itemvalue="CMake Application.AOC2020_Day21_Part2" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/aoc2020_day19.c</url>
-          <line>213</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
 </project>
