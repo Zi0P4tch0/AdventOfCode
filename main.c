@@ -65,6 +65,7 @@ GEN_DECLS(2020, 18)
 GEN_DECLS(2020, 19)
 GEN_DECLS(2020, 20)
 GEN_DECLS(2020, 21)
+GEN_DECLS(2020, 22)
 
 int main(int argc, char *argv[]) {
 
@@ -84,6 +85,7 @@ int main(int argc, char *argv[]) {
     PUSH_DECLS(2020, 19)
     PUSH_DECLS(2020, 20)
     PUSH_DECLS(2020, 21)
+    PUSH_DECLS(2020, 22)
 
     int exit_code = 0;
 

@@ -31,7 +31,8 @@ set(SOURCES ${SOURCES}
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day18.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day19.c
         ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day20.c
-        ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day21.c)
+        ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day21.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/aoc2020_day22.c)
 add_subdirectory(argtable)
 
 add_executable(AdventOfCode ${SOURCES} ${HEADERS})
